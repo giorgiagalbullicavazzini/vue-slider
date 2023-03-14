@@ -41,11 +41,15 @@ const app = createApp({
     methods: {
         prevImg() {
             this.currentVideogame--;
-            console.log(this.currentVideogame);
+            if(this.currentVideogame < 0) {
+                this.currentVideogame = this.videogames.length - 1;
+            }
         },
         nextImg() {
             this.currentVideogame++;
-            console.log(this.currentVideogame);
+            if(this.currentVideogame === this.videogames.length) {
+                this.currentVideogame = 0;
+            }
         }
     }
 }).mount('#app');
