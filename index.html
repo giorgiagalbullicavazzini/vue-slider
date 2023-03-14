@@ -16,7 +16,7 @@
 
         <div class="container">
             <!-- Slider -->
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" v-cloak>
 
                 <!-- Videogame -->
                 <div class="item">
@@ -35,20 +35,8 @@
                     <div class="next"></div>
                     <!-- // Arrows -->
 
-                    <div class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/03.webp" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/05.webp" alt="Avengers" />
+                    <div class="thumb active" v-for="videogame in videogames">
+                        <img :src="videogame.image" :alt="videogame.title" />
                     </div>
                 </div>
                 <!-- // Thumbnails -->
