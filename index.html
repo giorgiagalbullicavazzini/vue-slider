@@ -20,7 +20,7 @@
 
                 <!-- Videogame -->
                 <div class="item">
-                    <img :src="videogames[0].image" :alt="videogames[0].title" />
+                    <img :src="videogames[currentVideogame].image" :alt="videogames[0].title" />
                     <div class="text">
                         <h3>{{ videogames[0].title }}</h3>
                         <p> {{ videogames[0].text }}</p>
@@ -31,8 +31,8 @@
                 <!-- Thumbnails -->
                 <div class="thumbs">
                     <!-- Arrows -->
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevImg"></div>
+                    <div class="next" @click="nextImg"></div>
                     <!-- // Arrows -->
 
                     <div class="thumb active" v-for="videogame in videogames">

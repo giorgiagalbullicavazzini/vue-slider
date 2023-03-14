@@ -7,6 +7,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
+            currentVideogame: 0,
             // Videogames data
             videogames: [
                 {
@@ -35,6 +36,16 @@ const app = createApp({
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
             ]
+        }
+    },
+    methods: {
+        prevImg() {
+            this.currentVideogame--;
+            console.log(this.currentVideogame);
+        },
+        nextImg() {
+            this.currentVideogame++;
+            console.log(this.currentVideogame);
         }
     }
 }).mount('#app');
