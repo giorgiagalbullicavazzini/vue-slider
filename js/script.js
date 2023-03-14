@@ -23,12 +23,12 @@ const app = createApp({
                 {
                     image: 'img/03.webp',
                     title: 'Fortnite',
-                    text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+                    text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100-player face-off that combines looting, crafting, shootouts and chaos.",
                 },
                 {
                     image: 'img/04.webp',
                     title: 'Stray',
-                    text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+                    text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city.',
                 },
                 {
                     image: 'img/05.webp',
