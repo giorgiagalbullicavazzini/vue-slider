@@ -35,7 +35,7 @@
                     <div class="next" @click="nextImg"></div>
                     <!-- // Arrows -->
 
-                    <div class="thumb active" v-for="videogame in videogames">
+                    <div v-for="videogame in videogames" :class="{ active: videogame.isActive }" class="thumb">
                         <img :src="videogame.image" :alt="videogame.title" />
                     </div>
                 </div>
