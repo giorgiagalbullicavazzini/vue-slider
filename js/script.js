@@ -67,6 +67,11 @@ const app = createApp({
                 this.currentVideogame = 0;
             }
             this.activeThumb();
+        },
+        selectedThumb(index) {
+            this.activeThumb();
+            this.currentVideogame = index;
+            this.activeThumb();
         }
     }
 }).mount('#app');
