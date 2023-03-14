@@ -20,15 +20,10 @@
 
                 <!-- Videogame -->
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <img :src="videogames[0].image" :alt="videogames[0].title" />
                     <div class="text">
-                        <h3>Spiderman</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
-                        </p>
+                        <h3>{{ videogames[0].title }}</h3>
+                        <p> {{ videogames[0].text }}</p>
                     </div>
                 </div>
                 <!-- // Videogame -->
@@ -39,7 +34,7 @@
                     <div class="prev"></div>
                     <div class="next"></div>
                     <!-- // Arrows -->
-                    
+
                     <div class="thumb active">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>
