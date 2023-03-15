@@ -72,6 +72,17 @@ const app = createApp({
             this.activeThumb();
             this.currentVideogame = index;
             this.activeThumb();
+        },
+        autoplay() {
+            this.activeThumb();
+            this.currentVideogame++;
+            if(this.currentVideogame === this.videogames.length) {
+                this.currentVideogame = 0;
+            }
+            this.activeThumb();
         }
+    },
+    mounted() {
+        setInterval(this.autoplay, 3000);
     }
 }).mount('#app');
