@@ -8,6 +8,7 @@ const app = createApp({
     data() {
         return {
             currentVideogame: 0,
+            autoplayTimer: 'sliderTimer',
 
             // Videogames data
             videogames: [
@@ -74,15 +75,13 @@ const app = createApp({
             this.activeThumb();
         },
         autoplay() {
-            this.activeThumb();
-            this.currentVideogame++;
-            if(this.currentVideogame === this.videogames.length) {
-                this.currentVideogame = 0;
-            }
-            this.activeThumb();
+            this.autoplayTimer = setInterval(this.nextImg, 3000);
+        },
+        stopAutoplay() {
+            clearInterval(this.autoplayTimer);
         }
     },
     mounted() {
-        setInterval(this.autoplay, 3000);
+        this.autoplay();
     }
 }).mount('#app');

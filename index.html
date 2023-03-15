@@ -16,7 +16,7 @@
 
         <div class="container">
             <!-- Slider -->
-            <div class="slider-wrapper" tabindex="0" v-cloak>
+            <div class="slider-wrapper" @mouseenter="stopAutoplay" @mouseleave="autoplay" tabindex="0" v-cloak>
 
                 <!-- Videogame -->
                 <div class="item">
